@@ -57,6 +57,9 @@ similarity = pickle.load(open('models/similarite.pkl', 'rb'))  # Charger le mod�
 # Interface utilisateur Streamlit
 st.header('Système de Recommandation de Films')  # Titre de l'application
 
+# Ajouter une bannière en haut de l'application
+st.image("assets/banner.jpg", use_column_width=True)
+
 movie_list = movies['title'].values  # Obtenir la liste des titres de films
 
 # Widget de sélection de film
@@ -76,6 +79,8 @@ if st.button('Montrer la recommandation'):
             with col:  # Ajouter le texte et l'image dans la colonne correspondante
                 st.text(name)
                 st.image(f"https://image.tmdb.org/t/p/w500/{poster}")
+
+
 
 # etape 3 trop lente et ralentit mon systeme donc j'ai divisé la partie chargement du systeme
 
